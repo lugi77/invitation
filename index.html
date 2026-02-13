@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💘 Valentine's Invitation 💘</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Page 1 -->
+        <div class="card active" id="page1">
+            <div class="gif-container">
+                <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZm1iZDlyYnB2bzZtYXhyeTVhd2l2c2E1OHYyZHh6YXE5amx1ejAycSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/6hKL8BI8rRNrMRFtAx/giphy.gif" alt="Thinking">
+                <h2 class="message">Hiii babyyy hehehehe... 👀</h2>
+            </div>
+            <button class="continue-btn" onclick="nextPage(2)">OH!</button>
+        </div>
+
+        <!-- Page 2 -->
+        <div class="card" id="page2">
+            <div class="gif-container">
+                <img src="https://media3.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3aWtmaHdjdjE4NDQybTJjeHJzZjZtdjRpcHRtdXQwZ3p6NWtreW8yMiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/vwN2nKohPRTZwnK6Oq/giphy.webp" alt="Nervous">
+                <h2 class="message">Naa koy pangutana sa imuha... heheheh😳</h2>
+            </div>
+            <button class="continue-btn" onclick="nextPage(3)">UNSA MAN PUD!?</button>
+        </div>
+
+        <!-- Page 3 -->
+        <div class="card" id="page3">
+            <div class="gif-container">
+                <img src="https://media1.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3ZjQzYnZ5YXZkMzBqN3Z1bzgwMWFrNXE3aWp2N2p0cHByczk0c2RueSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/BNlSrpW0e4nbgVZ2we/giphy.webp" alt="Awkward">
+                <h2 class="message">Kanaaanggg... 😬</h2>
+            </div>
+            <button class="continue-btn" onclick="nextPage(4)">???</button>
+        </div>
+
+        <!-- Page 4 -->
+        <div class="card" id="page4">
+            <div class="gif-container">
+                <img src="https://media2.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3dGt0NXgyNW41a2g5eWlubjVoMHZoN3BzazVzazBlZnJhbDc3d20ybiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/sWBzg2D15WwQjHcxbt/giphy.webp" alt="Sweating">
+                <h2 class="message">You know na... 😅</h2>
+            </div>
+            <button class="continue-btn" onclick="nextPage(5)">WALA KO KABALO!!</button>
+        </div>
+
+        <!-- Page 5 -->
+        <div class="card" id="page5">
+            <div class="gif-container">
+                <img src="https://media1.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3OXh5c2QzNGliN3RmbXBjaXRrMjQ3bXV1eTZ5cmJtM2o0aTU2cW1kdSZlcD12MV9naWZzX3JlbGF0ZWQmY3Q9Zw/134VF6yzmHnEuA/giphy.webp" alt="Hopeful">
+                <h2 class="message">ummm... possibly ba nga... 🥺</h2>
+            </div>
+            <button class="continue-btn" onclick="nextPage(6)">Unsa UYY!?</button>
+        </div>
+
+        <!-- Page 6 -->
+        <div class="card" id="page6">
+            <div class="gif-container">
+                <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2dkeG56YWNoeGd1Z3MwNTk5dzZ2ZXRteThtdnY0c3N1ZXR4bHNpYSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/6C5LFuLcnhTZeypW0E/giphy.webp" alt="Please">
+                <h2 class="message">Maka-date ka karong Valentine's Day?? 💝</h2>
+            </div>
+            <button class="continue-btn" onclick="nextPage(7)">LUHH?!😳</button>
+        </div>
+
+        <!-- Page 7 -->
+        <div class="card" id="page7">
+            <div class="gif-container">
+                <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXFjeXlsN2hseGdhdWd2OWN3aWI1Z3JwMDE3c21sMzhyamNwcHRuMyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/uKvAWApE3vWL1MAASf/200.webp" alt="Celebrated">
+                <h2 class="message">Will you be my Valentine? 💕</h2>
+                <h1 class="message">YES or NO??</h1>
+                <p class="small-text">(choose wisely... take your time 😏)</p>
+            </div>
+            <div class="button-container">
+                <button class="continue-btn yes-btn" onclick="celebrate()">Yes! 💘</button>
+                <button class="continue-btn no-btn" id="noBtn" onclick="avoidClick(event)">No 💔</button>
+            </div>
+        </div>
+
+        <!-- Final celebration -->
+        <div class="card celebration" id="celebration">
+            <div class="gif-container">
+                <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHdheWUxM3JkOGNrenVwMm90YTgzZ2ZhZWZ4bGozejV4bWR5M2c5aiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/vPzbDN4rBxuvtpSpzF/giphy.webp" alt="Yay">
+                <h2 class="message">Yiiiee Happy Valentine's Babyyy! 🎊🎉💖</h2>
+                <p class="small-text"><strong>Venue:</strong> Elixir Cafe, Lim Ext., Digos City</p>
+                <p class="small-text"><strong>Dress:</strong> Wear something nice or comfortable</p>
+                <p class="small-text"><strong>Time:</strong> February 17, 2026 | 1:00 PM</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
