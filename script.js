@@ -1,5 +1,3 @@
-let noButtonClicked = false;
-
 function nextPage(pageNumber) {
     // Hide all cards
     const cards = document.querySelectorAll('.card');
@@ -30,30 +28,6 @@ function avoidMouse(event) {
     button.style.position = 'fixed';
     button.style.left = randomX + cardRect.left + 'px';
     button.style.top = randomY + cardRect.top + 'px';
-}
-
-function avoidClick(event) {
-    event.preventDefault();
-    
-    if (!noButtonClicked) {
-        // First click - just move once and set flag
-        noButtonClicked = true;
-        avoidMouse(event);
-        
-        // Add shake animation
-        const button = event.target;
-        button.style.animation = 'shake 0.3s';
-        setTimeout(() => {
-            button.style.animation = '';
-        }, 300);
-        
-        // Add mouseover listener for subsequent hovers
-        const noBtn = document.getElementById('noBtn');
-        noBtn.addEventListener('mouseover', avoidMouse);
-    } else {
-        // After first click, just avoid the mouse (this won't be called on click anymore)
-        avoidMouse(event);
-    }
 }
 
 function celebrate() {
